@@ -1,0 +1,35 @@
+# Visual Studio Code
+.vscode
+
+# Visual Studio
+.vs/
+*.vcxproj.user
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build directories
+Debug/
+Release/
+x64/
+x86/
+out/
+build/
+
+# Compiled binaries
+*.exe
+*.dll
+*.lib
+*.pdb
+*.obj
+*.ilk
+*.idb
+*.exp
+
+# Cache
+*.VC.db
+*.opendb
+ipch/
+*.cache
+*.tlog
