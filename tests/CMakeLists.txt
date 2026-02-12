@@ -1,4 +1,4 @@
-file(GLOB TEST_SOURCES "*.cpp")
+file(GLOB TEST_SOURCES "unit/*.cpp")
 
 add_executable(dkv_client_tests ${TEST_SOURCES})
 
