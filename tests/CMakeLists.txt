@@ -18,5 +18,5 @@ target_include_directories(dkv_client_tests
 	${GTEST_INCLUDE_DIRS}
 )
 
-#include(GoogleTest) 
-#gtest_discover_tests(dkv_client_tests)
+include(GoogleTest) 
+gtest_discover_tests(dkv_client_tests)

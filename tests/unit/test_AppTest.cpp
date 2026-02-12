@@ -2,7 +2,7 @@
 #include "app/App.h"
 
 TEST(AppPlaceholderTest, PlaceHolderTest) {
-    App app;
+    App app({});
     
     app.run();
 
