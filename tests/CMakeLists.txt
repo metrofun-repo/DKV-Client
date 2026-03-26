@@ -7,6 +7,7 @@ target_link_libraries(dkv_client_tests
 		GTest::gtest
 		GTest::gtest_main
 		dkv_client_core
+		nlohmann_json::nlohmann_json
 )
 set_property(TARGET dkv_client_tests PROPERTY FOLDER "Tests")
 get_target_property(GTEST_INCLUDE_DIRS GTest::gtest INTERFACE_INCLUDE_DIRECTORIES)

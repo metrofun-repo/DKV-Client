@@ -2,9 +2,8 @@
 
 #include <string>
 
-struct HttpResponse;
-
-namespace httplib { class Client; }
+#include "HttpResponse.h"
+#include "third-party/httplib.h"
 
 class HttpClient
 {

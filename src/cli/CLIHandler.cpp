@@ -57,7 +57,11 @@ void CLIHandler::cmdSet(const std::vector<std::string>& args)
         printInvalidArgs("set");
         return;
     }
-    keyValueApi.set(args[0], args[1]);
+    auto result = keyValueApi.set(args[0], args[1]);
+    if(!result.hasValue())
+    {
+        std::cout << result.error().details << std::endl;
+    }
 }
 
 void CLIHandler::cmdGet(const std::vector<std::string>& args)
@@ -67,7 +71,11 @@ void CLIHandler::cmdGet(const std::vector<std::string>& args)
         printInvalidArgs("get");
         return;
     }
-    keyValueApi.get(args[0]);
+    auto result = keyValueApi.get(args[0]);
+    if(!result.hasValue())
+    {
+        std::cout << result.error().details << std::endl;
+    }
 }
 void CLIHandler::cmdRemove(const std::vector<std::string>& args)
 {
@@ -76,7 +84,11 @@ void CLIHandler::cmdRemove(const std::vector<std::string>& args)
         printInvalidArgs("remove");
         return;
     }
-    keyValueApi.remove(args[0]);
+    auto result = keyValueApi.remove(args[0]);
+    if(!result.hasValue())
+    {
+        std::cout << result.error().details << std::endl;
+    }
 }
 
 void CLIHandler::cmdShowConfig()

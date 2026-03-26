@@ -1,6 +1,5 @@
 #include "HttpClient.h"
-#include "HttpResponse.h"
-#include "third-party/httplib.h"
+
 
 HttpClient::HttpClient(const std::string& host, int port, int connTimeout, int readTimeout, int writeTimeout)
     : host(host)
@@ -21,7 +20,7 @@ httplib::Client HttpClient::getConfiguredClient() const
 
 HttpResponse HttpClient::post(const std::string& endpoint, const std::string& body)
 {
-    return makeResponse("POST", getConfiguredClient().Post(endpoint.c_str(), body, "text/plain"));
+    return makeResponse("POST", getConfiguredClient().Post(endpoint.c_str(), body, "application/json"));
 }
 
 HttpResponse HttpClient::get(const std::string& endpoint) const
